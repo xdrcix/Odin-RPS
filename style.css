@@ -1,0 +1,82 @@
+
+#container{
+    background-color: #023020;
+    padding: 10px;
+    height: 100vh;
+}
+
+#score {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+
+    margin: 20px;
+    text-align: center;
+    
+}
+
+#score #gameScore {
+    display: flex;
+    justify-content:center;
+    gap: 40px;
+
+}
+
+#gameState {
+    color: white;
+}
+
+#choices {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+    
+}
+
+#choices button {
+    background-color: #00A36C;
+
+    width: 25vh;
+    padding: 15vh 0vh;
+    border: 3px;
+    border-color: #00A36C;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+#choices button:hover {
+    background-color: aquamarine;
+    transition: 0.7s;
+}
+
+
+#wipe {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    
+}
+
+#player, #cpu {
+    padding: 5vh;
+    width: 30vh;
+    
+    background-color: aquamarine;
+    border: 4px;
+    border-radius: 8px;
+    border-color: #00A36C;
+    border-style: solid;
+}
+
+#wipe button{
+    background-color: #00A36C;
+    border-color: #00A36C;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+#wipe button:hover {
+    background-color: aquamarine;
+    transition: 0.7s;
+}
