@@ -53,8 +53,8 @@ let rpsRound = (playerGuess, cpuGuess) => {
     }
 }
 
-
-let game = () => {
+//discontinued after refactoring
+/* let game = () => {
     console.log('The game has started');
     let playerWins = 0;
     let cpuWins = 0;
@@ -87,7 +87,7 @@ let game = () => {
     }
         
 
-}
+} */
 
 const gameBtn = document.querySelectorAll('button');
 
