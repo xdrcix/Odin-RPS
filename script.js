@@ -53,42 +53,6 @@ let rpsRound = (playerGuess, cpuGuess) => {
     }
 }
 
-//discontinued after refactoring
-/* let game = () => {
-    console.log('The game has started');
-    let playerWins = 0;
-    let cpuWins = 0;
-    for (let i = 0; i <= 5; i++){
-        
-        let roundWinner = rpsRound(getPlayerChoice('rock'),getComputerChoice());
-        let tallyWin = roundWinner.split('!')
-        console.log(roundWinner);
-        if (tallyWin[0] === 'You forced a Draw!'){
-            console.log('Redo round:');
-            i = i-1;
-        }
-        else if (tallyWin[0] === 'You Win '){
-            playerWins++;
-            console.log('Player: %s | Cpu: %s', playerWins, cpuWins);
-        }
-        else if (tallyWin[0] === 'You Lose '){
-            cpuWins++;
-            console.log('Player: %s | Cpu: %s', playerWins, cpuWins);
-        }
-    }
-
-    if (playerWins > cpuWins){
-        console.log('You have won !!!!');
-        return("You have won !!!!");
-    }   
-    else{
-        console.log('You lost D;');
-        return('You lost D;');
-    }
-        
-
-} */
-
 const gameBtn = document.querySelectorAll('button');
 
 let playerWins = 0;
@@ -104,14 +68,18 @@ const cpuScore = document.createElement('p');
 const gameTextEvent = document.querySelector('#gameState');
 const gameText = document.createElement('p');
 
+
+//Main logic
 gameBtn.forEach((button) => {
       
     console.log(button)
+    // Gather button click
     button.addEventListener('click', function (e) {
         console.log(e);
         console.log(e.target.classList[0]);
+        //check if game needs to be restarted
         if (e.target.classList[0] != 'clear'){
-
+            //Check if the game is won
             if(playerWins < 5 && cpuWins < 5){  
                 let roundWinner = rpsRound(getPlayerChoice(e.target.classList[0]), getComputerChoice());
                 let tallyWin = roundWinner.split('!')
